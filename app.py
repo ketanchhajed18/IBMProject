@@ -23,7 +23,7 @@ if uploaded_file is not None:
     if st.checkbox("Show Sample Data"):
         st.write(data_df.head(40))      # Display First 10 Rows
     if st.checkbox('Show Full Data'):
-        data_df                         # Display Full Data
+        st.write(data_df)                         # Display Full Data
 
     # review the value counts
     freq_items = data_df['itemDescription'].value_counts().head(15)
