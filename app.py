@@ -47,14 +47,15 @@ if uploaded_file is not None:
 
     # create a datafram with product support, confidence , and lift values
     rules = association_rules(freq_items, metric = "confidence", min_threshold = 0)
-    st.write(rules)
+    
+    """st.write(rules)
     
     choice_rules = association_rules(freq_items, metric = "confidence", min_threshold = 0)
     st.write(choice_rules)
     choice = st.text_input('Enter 1st product')
     selected = choice_rules[choice_rules.antecedents==frozenset({"soda"})]
     if selected:
-        st.write(selected.head(10))
+        st.write(selected.head(10))"""
 
     # add a column for a Zhang's core
     def zhangs_rule(rules):
