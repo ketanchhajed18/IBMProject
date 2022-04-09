@@ -50,7 +50,7 @@ if uploaded_file is not None:
     
     choice = st.text_input('Enter 1st product')
     choice_rules = association_rules(freq_items, metric = "confidence", min_threshold = 0)
-     st.write(choice_rules)
+    st.write(choice_rules)
     selected = choice_rules[choice_rules.antecedents==frozenset({"soda"})]
     if selected:
         st.write(selected.head(10))
