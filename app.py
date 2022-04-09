@@ -47,6 +47,7 @@ if uploaded_file is not None:
 
     # create a datafram with product support, confidence , and lift values
     rules = association_rules(freq_items, metric = "confidence", min_threshold = 0)
+    st.write(rules)
     
     choice_rules = association_rules(freq_items, metric = "confidence", min_threshold = 0)
     st.write(choice_rules)
