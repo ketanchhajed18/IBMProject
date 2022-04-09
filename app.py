@@ -50,8 +50,9 @@ if uploaded_file is not None:
     
     choice = st.text_input('Enter 1st product')
     choice_rules = association_rules(freq_items, metric = "confidence", min_threshold = 0)
-    selected = choice_rules[choice_rules.antecedents==frozenset({choice})]
-    st.write(selected.head(10))
+    selected = choice_rules[choice_rules.antecedents==frozenset({"soda"})]
+    if selected:
+        st.write(selected.head(10))
 
     # add a column for a Zhang's core
     def zhangs_rule(rules):
