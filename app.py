@@ -67,5 +67,5 @@ if uploaded_file is not None:
 
     # pd.read_csv()
     if st.checkbox("Show Combo Data"):
-        combo_df = pd.read_csv('https://drive.google.com/file/d/1WAQfopWHNYAz22rkMrU-eloTgv9bTiNo/view?usp=sharing')
+        combo_df = pd.read_csv('https://ibmketan.s3.ap-south-1.amazonaws.com/basket+(1).csv')
         st.write(combo_df)
